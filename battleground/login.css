@@ -10,6 +10,7 @@ body {
   line-height: 1.35;
 }
 
+
 .page {
   min-height: 100vh;
   display: grid;
@@ -31,7 +32,6 @@ body {
   z-index: 0;
   will-change: transform, filter;
 }
-
 
 .bg::after {
   content: "";

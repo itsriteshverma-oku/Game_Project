@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container {
+  max-width: 400px;
+}
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  color: red;
+  margin-bottom: 1em;
+  text-shadow: 0 0 15px #e94560b0;
+}
+.comingsoon {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8em;
+  color: #f9f7f7;
+  text-shadow: 0 0 10px #f9f7f7ab;
+}
+.footer {
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #a5a58d;
+  opacity: 0.8;
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 2em;
+  }
+  .comingsoon {
+    font-size: 1.3em;
+  }
+}
+.backlink {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: 2px solid red;
+  padding: 5px 10px;
+  background-color: white; 
+  z-index: 1000; 
+  text-decoration: none; 
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+}
+

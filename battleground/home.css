@@ -10,6 +10,7 @@ body {
   line-height: 1.4;
 }
 
+
 .navbar {
   position: fixed;
   top: 0;
@@ -30,16 +31,18 @@ body {
 .nav-links a:hover { color: #ff3333; }
 .login a {
   padding: 20px 35px;
-  border: 2px solid white;
-  border-radius: 10px;
+  border: 2px solid #ff3333;
+  border-radius: 15px;
   color: #fff;
   text-decoration: none;
 }
 .login a:hover {
   background: #ff3333;
-  border-color: #ff3333;
-  color: #fff;
+  color: #111;
+  border-color:
+  white;
 }
+
 
 .hero {
   position: relative;
@@ -51,12 +54,13 @@ body {
   justify-content: center;
 }
 
+
 .video-bg {
   position: absolute;
   inset: 0;
   z-index: 1;
   overflow: hidden;
-  background: #000; 
+  background: #000;
 }
 
 
@@ -96,9 +100,9 @@ body {
 
 .buttons { margin-top: 26px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 .btn {
-  padding: 20px 50px;
-  border-radius: 12px;
-  font-size: 20px;
+  padding: 30px 40px;
+  border-radius: 8px;
+  font-size: 16px;
   text-decoration: none;
   font-weight: 700;
   transition: transform .22s ease, box-shadow .22s ease;
@@ -106,7 +110,6 @@ body {
 .yellow { background: #ffcc00; color: #111; }
 .red    { background: #ff3333; color: #fff; }
 .btn:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.6); }
-
 
 .divider { border: 0; height: 6px; background: linear-gradient(90deg,#ff3333,#ffcc00); }
 
@@ -139,7 +142,6 @@ body {
 .info-section h1 { font-size: 44px; margin-bottom: 12px; font-weight: 900; }
 .info-section button { margin-top: 18px; padding: 12px 24px; font-size: 16px; border-radius: 6px; border: none; cursor:pointer; background: #ff3b3b; color: white; }
 
-
 .features { list-style: none; margin-top: 20px; display: inline-block; text-align: left; }
 .features li { margin: 8px 0; font-size: 18px; }
 
@@ -149,6 +151,9 @@ body {
 .discord-btn { margin-top: 10px; padding: 10px 22px; background:#5865F2; border-radius:8px; color:#fff; border:none; cursor:pointer; }
 .contact { margin-top: 26px; }
 .contact a { color: #ffcc00; text-decoration: none; }
+
+
+
 
 @media (max-width: 900px) {
   .video-bg { display: none; }
@@ -161,6 +166,7 @@ body {
   .title-top { font-size: 20px; }
   .nav-links { display: none; } 
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; transform: none !important; }
