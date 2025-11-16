@@ -1,4 +1,4 @@
-/* ===== reset ===== */
+
 •⁠  ⁠{ box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
 body {
@@ -10,7 +10,6 @@ body {
   line-height: 1.35;
 }
 
-/* ===== page layout ===== */
 .page {
   min-height: 100vh;
   display: grid;
@@ -20,7 +19,6 @@ body {
   padding: 32px;
 }
 
-/* background image layer (remote URL) */
 .bg {
   position: absolute;
   inset: 0;
@@ -34,7 +32,7 @@ body {
   will-change: transform, filter;
 }
 
-/* overlay for readability */
+
 .bg::after {
   content: "";
   position: absolute;
@@ -43,7 +41,7 @@ body {
   pointer-events: none;
 }
 
-/* container that holds brand + card */
+
 .wrap {
   position: relative;
   z-index: 5;
@@ -55,7 +53,7 @@ body {
   align-items: start;
 }
 
-/* brand */
+
 .brand {
   display: flex;
   justify-content: center;
@@ -69,7 +67,7 @@ body {
 }
 .brand-link span { color: #ff4d4d; }
 
-/* card */
+
 .card {
   width: 100%;
   max-width: 420px;
@@ -84,7 +82,7 @@ body {
 .card h1 { font-size: 24px; margin-bottom: 6px; }
 .lead { color: #ddd; margin-bottom: 18px; font-size: 0.98rem; }
 
-/* form elements */
+
 label {
   display: block;
   font-size: 13px;
@@ -116,7 +114,7 @@ input:focus-visible {
 
 input::placeholder { color: rgba(255,255,255,0.5); }
 
-/* layout rows */
+
 .row {
   display: flex;
   align-items: center;
@@ -133,7 +131,7 @@ input::placeholder { color: rgba(255,255,255,0.5); }
 .remember input { width: 16px; height: 16px; }
 .forgot { color: #ffb3b3; text-decoration: none; font-size: 14px; }
 
-/* buttons */
+
 .btn {
   display: inline-block;
   width: 100%;
@@ -153,7 +151,7 @@ input::placeholder { color: rgba(255,255,255,0.5); }
   box-shadow: 0 10px 26px rgba(255,77,77,0.14);
 }
 
-/* divider */
+
 .divider {
   display: flex;
   align-items: center;
@@ -170,7 +168,7 @@ input::placeholder { color: rgba(255,255,255,0.5); }
   background: rgba(255,255,255,0.06);
 }
 
-/* social buttons */
+
 .socials {
   display: flex;
   gap: 10px;
@@ -193,7 +191,7 @@ input::placeholder { color: rgba(255,255,255,0.5); }
 
 .footer { text-align: center; color: #999; margin-top: 8px; font-size: 13px; }
 
-/* responsive */
+
 @media (min-width: 1000px) {
   .wrap { grid-template-columns: 1fr 420px; padding: 40px; gap: 40px; }
   .brand { justify-content: flex-start; }

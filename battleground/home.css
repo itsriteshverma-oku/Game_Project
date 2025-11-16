@@ -1,4 +1,4 @@
-* RESET */
+
 •⁠  ⁠{ box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
 body {
@@ -10,7 +10,6 @@ body {
   line-height: 1.4;
 }
 
-/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -42,7 +41,6 @@ body {
   color: #fff;
 }
 
-/* HERO */
 .hero {
   position: relative;
   height: 100vh;
@@ -53,16 +51,15 @@ body {
   justify-content: center;
 }
 
-/* VIDEO BG CONTAINER */
 .video-bg {
   position: absolute;
   inset: 0;
   z-index: 1;
   overflow: hidden;
-  background: #000; /* fallback */
+  background: #000; 
 }
 
-/* Make iframe larger than container so it always covers */
+
 .video-bg iframe {
   position: absolute;
   top: 50%;
@@ -71,11 +68,11 @@ body {
   height: 190%;
   transform: translate(-50%, -50%);
   border: 0;
-  pointer-events: none; /* stops clicks on video */
+  pointer-events: none; 
   filter: brightness(0.6) contrast(1);
 }
 
-/* dark overlay to make text readable */
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -83,7 +80,7 @@ body {
   z-index: 2;
 }
 
-/* hero content */
+
 .hero-content {
   position: relative;
   z-index: 5;
@@ -96,7 +93,7 @@ body {
 .title-main { font-size: 56px; margin-top: 8px; font-weight: 900; letter-spacing: -1px; }
 .title-main span { color: #ff3333; }
 
-/* buttons */
+
 .buttons { margin-top: 26px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 .btn {
   padding: 20px 50px;
@@ -110,10 +107,10 @@ body {
 .red    { background: #ff3333; color: #fff; }
 .btn:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.6); }
 
-/* DIVIDER */
+
 .divider { border: 0; height: 6px; background: linear-gradient(90deg,#ff3333,#ffcc00); }
 
-/* EVENT SECTION */
+
 .event-section {
   background-image: url("https://img.redbull.com/images/c_crop,w_3840,h_1920,x_0,y_140/c_auto,w_1200,h_600/f_auto,q_auto/redbullcom/2020/7/17/fz7t26g79u2ts157jmrq/warzone-parachute-call-of-duty");
   background-size: cover;
@@ -128,7 +125,7 @@ body {
 .event-content h1 { font-size: 44px; margin-bottom: 12px; font-weight: 900; }
 .intel-btn { display:inline-block; margin-top:20px; padding:10px 24px; background:#ff3333; border-radius:6px; color:#fff; text-decoration:none; }
 
-/* INFO SECTION */
+
 .info-section {
   padding: 80px 40px;
   text-align: center;
@@ -142,20 +139,17 @@ body {
 .info-section h1 { font-size: 44px; margin-bottom: 12px; font-weight: 900; }
 .info-section button { margin-top: 18px; padding: 12px 24px; font-size: 16px; border-radius: 6px; border: none; cursor:pointer; background: #ff3b3b; color: white; }
 
-/* FEATURES */
+
 .features { list-style: none; margin-top: 20px; display: inline-block; text-align: left; }
 .features li { margin: 8px 0; font-size: 18px; }
 
-/* FOOTER */
+
 .footer-section { background: #0f0f10; padding: 60px 20px 40px; text-align: center; color: #ddd; }
 .footer-content h2 { color: #ffcc00; margin-bottom: 8px; }
 .discord-btn { margin-top: 10px; padding: 10px 22px; background:#5865F2; border-radius:8px; color:#fff; border:none; cursor:pointer; }
 .contact { margin-top: 26px; }
 .contact a { color: #ffcc00; text-decoration: none; }
 
-/* Responsive behavior */
-
-/* On small screens: hide iframe (many mobile browsers block autoplay) and use background image fallback */
 @media (max-width: 900px) {
   .video-bg { display: none; }
   .hero {
@@ -165,10 +159,9 @@ body {
   }
   .title-main { font-size: 36px; }
   .title-top { font-size: 20px; }
-  .nav-links { display: none; } /* simplify navbar on mobile — you can add a hamburger later */
+  .nav-links { display: none; } 
 }
 
-/* accessibility: reduce motion */
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; transform: none !important; }
   .video-bg iframe { animation: none; }
