@@ -1,0 +1,214 @@
+/* ===== reset ===== */
+•⁠  ⁠{ box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.35;
+}
+
+/* ===== page layout ===== */
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+}
+
+/* background image layer (remote URL) */
+.bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/home/black-ops-7/Chimera_Store-LP_Hero_Desktop-LG.webp?imwidth=3840");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(1.22) contrast(1.04);
+  transform: scale(1.02);
+  z-index: 0;
+  will-change: transform, filter;
+}
+
+/* overlay for readability */
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.6) 70%);
+  pointer-events: none;
+}
+
+/* container that holds brand + card */
+.wrap {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* brand */
+.brand {
+  display: flex;
+  justify-content: center;
+}
+.brand-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 0.3px;
+}
+.brand-link span { color: #ff4d4d; }
+
+/* card */
+.card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(0,0,0,0.36));
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+.card h1 { font-size: 24px; margin-bottom: 6px; }
+.lead { color: #ddd; margin-bottom: 18px; font-size: 0.98rem; }
+
+/* form elements */
+label {
+  display: block;
+  font-size: 13px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #e6e6e6;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .12s ease, transform .12s ease;
+}
+
+input:focus,
+input:focus-visible {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transform: translateY(-1px);
+  outline: 2px solid rgba(255, 77, 77, 0.12);
+  outline-offset: 2px;
+}
+
+input::placeholder { color: rgba(255,255,255,0.5); }
+
+/* layout rows */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.remember {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #ddd;
+  font-size: 14px;
+}
+.remember input { width: 16px; height: 16px; }
+.forgot { color: #ffb3b3; text-decoration: none; font-size: 14px; }
+
+/* buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ff4d4d, #ff9a00);
+  box-shadow: 0 10px 26px rgba(255,77,77,0.14);
+}
+
+/* divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #bbb;
+  font-size: 13px;
+  margin: 18px 0;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* social buttons */
+.socials {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.btn-social {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-social.google { background: linear-gradient(90deg,#fff,#f1f1f1); color: #111; }
+.btn-social.discord { background: linear-gradient(90deg,#5865F2,#4b56d9); color: #fff; }
+
+.signup { text-align: center; margin-top: 12px; color: #ddd; }
+.signup a { color: #ffb3b3; text-decoration: none; }
+
+.footer { text-align: center; color: #999; margin-top: 8px; font-size: 13px; }
+
+/* responsive */
+@media (min-width: 1000px) {
+  .wrap { grid-template-columns: 1fr 420px; padding: 40px; gap: 40px; }
+  .brand { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  .card { padding: 20px; border-radius: 10px; }
+  .brand-link { font-size: 20px; }
+}
+.card .back-btn {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #ffb3b3;
+}
+.card .back-btn:hover {
+  text-decoration: underline;
+}
